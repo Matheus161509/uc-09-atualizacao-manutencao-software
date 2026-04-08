@@ -1,0 +1,86 @@
+/* style.css - Patas Felizes Pet Shop */
+
+/* Fonte customizada via Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+/* Reset e base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Scroll suave para âncoras */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===================== 
+   ACESSIBILIDADE - PROBLEMAS PROPOSITAIS 
+   BUG: as classes abaixo usam cores de texto com baixo contraste,
+   isso complementa os problemas de contraste já no HTML via Tailwind.
+===================== */
+
+/* Animação simples de entrada para o hero */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text {
+  animation: fadeInUp 0.8s ease both;
+}
+
+/* Estilo para cards de serviço (que NÃO foram implementados no HTML) */
+/* BUG/FEATURE: este CSS existe mas os cards não foram adicionados ao HTML */
+.service-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.service-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Navbar ativa */
+nav a.active {
+  border-bottom: 2px solid #fff;
+}
+
+/* Highlight de formulário com erro de validação */
+input.input-error,
+textarea.input-error {
+  border-color: #f87171;
+}
+
+/* =====================
+   RESPONSIVIDADE BÁSICA
+===================== */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 1rem;
+  }
+
+  /* BUG: no mobile o header não colapsa o menu em hamburguer,
+     os itens ficam todos espremidos - problema de responsividade */
+}

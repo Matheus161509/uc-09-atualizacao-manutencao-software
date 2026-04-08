@@ -1,0 +1,32 @@
+# --- FORMAS DE RODAR O BANCO DE DADOS (3 MANEIRAS): ---
+# 
+# 1. PELO TERMINAL (MODO COMANDO): 
+#    - Abra o terminal na pasta deste arquivo e digite: docker compose up -d
+# 
+# 2. PELO VS CODE (PLUGIN DOCKER):
+#    - Instale a extensão 'Docker' da Microsoft.
+#    - Clique com o botão direito NESTE arquivo (docker-compose.yml) e selecione 'Compose Up'.
+# 
+# 3. DIRETAMENTE PELO DOCKER DESKTOP:
+#    - No Dashboard do Docker Desktop, procure por 'mysql' em Images e clique no ícone de 'Run' (ou selecione este projeto em Containers para dar Start após o primeiro uso).
+#
+# --- DADOS DE CONEXÃO: ---
+# Host: localhost | Porta: 3306 | Usuário: root | Senha: SuperSenha@10
+
+name: Databases
+
+services:
+  mysql-db:
+    container_name: mysql-db
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "SuperSenha@10"
+      MYSQL_DATABASE: "dbpadrao"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
+      
