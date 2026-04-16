@@ -26,6 +26,8 @@
           <li><a href="#servicos" class="hover:underline">Serviços</a></li>
           <li><a href="#depoimentos" class="hover:underline">Depoimentos</a></li>
           <li><a href="#contato" class="hover:underline">Contato</a></li>
+          <li><a href="#galeria" class="hover:underline">Galeria</a></li>
+          <li><a href="#agendamento" class="hover:underline">Agendamento</a></li>
         </ul>
       </nav>
     </div>
@@ -82,7 +84,62 @@
     <div class="max-w-7xl mx-auto text-center">
       <h2 class="text-3xl font-extrabold text-yellow-500 mb-4">Nossos Serviços</h2>
       <p class="text-gray-500 mb-12">Tudo que seu pet precisa em um só lugar.</p>
-      <p class="text-gray-400 italic">Serviços em breve...</p>
+       
+      <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Serviço 1 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="images/banho.png" alt="Banho e Tosa" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-yellow-600 mb-2">Banho & Tosa</h3>
+          <p class="text-gray-500">Cuidado completo para deixar seu pet limpo e saudável.</p>
+        </div>
+      </div>
+
+      <!-- Serviço 2 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e" alt="Consulta Veterinária" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-yellow-600 mb-2">Consulta Veterinária</h3>
+          <p class="text-gray-500">Atendimento especializado para garantir a saúde do seu pet.</p>
+        </div>
+      </div>
+
+      <!-- Serviço 3 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="images/castrador.png" alt="Vacinação" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-yellow-600 mb-2">Vacinação</h3>
+          <p class="text-gray-500">Proteção essencial contra doenças com vacinas atualizadas.</p>
+        </div>
+      </div>
+
+      <!-- Serviço 4 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8" alt="Hotel para Pets" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-yellow-600 mb-2">Hotel para Pets</h3>
+          <p class="text-gray-500">Um lugar seguro e confortável enquanto você viaja.</p>
+        </div>
+      </div>
+
+      <!-- Serviço 5 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="images/adestramento.png" alt="Adestramento" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-yellow-600 mb-2">Adestramento</h3>
+          <p class="text-gray-500">Treinamento para melhorar o comportamento do seu pet.</p>
+        </div>
+      </div>
+
+      <!-- Serviço 6 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee" alt="Pet Shop" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-yellow-600 mb-2">Pet Shop</h3>
+          <p class="text-gray-500">Produtos de qualidade para o dia a dia do seu pet.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -124,19 +181,20 @@
 
       <div class="bg-white rounded-2xl p-8 shadow-lg text-left max-w-xl mx-auto">
         <form id="formContato" novalidate>
+    
           <div class="mb-4">
             <label for="nome" class="block text-gray-700 font-semibold mb-1">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome completo"
+            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo"
               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
           </div>
           <div class="mb-4">
             <label for="email" class="block text-gray-700 font-semibold mb-1">E-mail</label>
-            <input type="email" id="e-mail" name="email" placeholder="seu@email.com"
+            <input type="email" id="email" name="email" required placeholder="seu@email.com"
               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
           </div>
           <div class="mb-4">
             <label for="mensagem" class="block text-gray-700 font-semibold mb-1">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?"
+            <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Como podemos ajudar?"
               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
           </div>
           <button type="submit"
@@ -169,6 +227,153 @@
   </footer>
 
   <script src="app.js"></script>
+
+
+
+<!-- ===================== GALERIA ===================== -->
+<section id="galeria" class="py-20 px-4 bg-yellow-50">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-extrabold text-yellow-500 mb-4">
+      Pets Atendidos 🐾
+    </h2>
+    <p class="text-gray-500 mb-12">
+      Alguns dos nossos clientes mais fofos!
+    </p>
+
+    <div id="galeriaPets" class="grid md:grid-cols-3 gap-6">
+      
+      <!-- Pet 1 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16"
+          class="w-full h-56 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-yellow-600">Thor</h3>
+          <p class="text-gray-500 text-sm">Banho & Tosa</p>
+        </div>
+      </div>
+
+      <!-- Pet 2 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d"
+          class="w-full h-56 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-yellow-600">Max</h3>
+          <p class="text-gray-500 text-sm">Vacinação</p>
+        </div>
+      </div>
+
+      <!-- Pet 3 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006"
+          class="w-full h-56 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-yellow-600">Nina</h3>
+          <p class="text-gray-500 text-sm">Adestramento</p>
+        </div>
+      </div>
+
+      <!-- Pet 4 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6"
+          class="w-full h-56 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-yellow-600">Bob</h3>
+          <p class="text-gray-500 text-sm">Banho</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AGENDAMENTO ===================== -->
+<section id="agendamento" class="py-20 px-4 bg-white">
+  <div class="max-w-4xl mx-auto text-center">
+    
+    <h2 class="text-3xl font-extrabold text-yellow-500 mb-4">
+      Agende um Serviço 🐾
+    </h2>
+    <p class="text-gray-500 mb-8">
+      Escolha o melhor horário para cuidar do seu pet
+    </p>
+
+    <div class="bg-yellow-50 rounded-2xl p-8 shadow-lg text-left">
+
+      <form id="formAgendamento">
+
+        <!-- Nome -->
+        <div class="mb-4">
+          <label class="block font-semibold mb-1">Seu Nome</label>
+          <input type="text" id="nomeAgendamento"
+            class="w-full border rounded-lg px-4 py-2">
+        </div>
+
+        <!-- Serviço -->
+        <div class="mb-4">
+          <label class="block font-semibold mb-1">Serviço</label>
+          <select id="servico" class="w-full border rounded-lg px-4 py-2">
+            <option value="">Selecione</option>
+            <option>Banho & Tosa</option>
+            <option>Consulta Veterinária</option>
+            <option>Vacinação</option>
+            <option>Hotel para Pets</option>
+            <option>Adestramento</option>
+          </select>
+        </div>
+
+        <!-- Data -->
+        <div class="mb-4">
+          <label class="block font-semibold mb-1">Data</label>
+          <input type="date" id="data" class="w-full border rounded-lg px-4 py-2">
+        </div>
+
+        <!-- Horário -->
+        <div class="mb-6">
+          <label class="block font-semibold mb-1">Horário</label>
+          <select id="hora" class="w-full border rounded-lg px-4 py-2">
+            <option value="">Selecione</option>
+            <option>09:00</option>
+            <option>10:00</option>
+            <option>11:00</option>
+            <option>14:00</option>
+            <option>15:00</option>
+            <option>16:00</option>
+          </select>
+        </div>
+
+        <button type="submit"
+          class="w-full bg-yellow-300 font-bold py-3 rounded-lg hover:bg-yellow-400">
+          Agendar
+        </button>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- BOTÃO WHATSAPP -->
+<a href="https://wa.me/554832324545?text=Olá!%20Gostaria%20de%20agendar%20um%20serviço%20🐾"
+   target="_blank"
+   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition z-1150">
+
+  <!-- Ícone -->
+  <svg xmlns="http://www.w3.org/2000/svg" 
+       class="w-25 h-36" 
+       fill="currentColor" 
+       viewBox="0 0 24 24">
+    <path d="M20.52 3.48A11.8 11.8 0 0012.01 0C5.38 0 .01 5.37.01 12c0 2.12.55 4.2 1.6 6.04L0 24l6.17-1.6A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 21.82c-1.8 0-3.55-.48-5.08-1.38l-.36-.21-3.66.95.98-3.56-.24-.37A9.77 9.77 0 012.18 12c0-5.41 4.4-9.82 9.82-9.82 2.62 0 5.08 1.02 6.93 2.87A9.74 9.74 0 0121.82 12c0 5.41-4.4 9.82-9.82 9.82zm5.39-7.35c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.8-1.68-2.1-.17-.3-.02-.47.13-.62.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.5-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.52 0 1.5 1.08 2.95 1.23 3.15.15.2 2.12 3.23 5.13 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+  </svg>
+
+</a>
 </body>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK77RD3SZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DK77RD3SZY');
+</script>
 </html>
