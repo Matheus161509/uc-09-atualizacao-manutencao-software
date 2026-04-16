@@ -10,29 +10,33 @@
 // usa getElementById com o ID errado ('form-contato' ao invés de 'formContato')
 document.addEventListener('DOMContentLoaded', function () {
 
-  const form = document.getElementById('form-contato'); // BUG: ID errado! No HTML é 'formContato'
+ const form = document.getElementById('formContato');
 
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+form.addEventListener('submit', function (e) {
+  e.preventDefault(); // impede recarregar a página
 
-      const nome = document.getElementById('nome').value.trim();
-      const email = document.getElementById('e-mail').value.trim();
-      const mensagem = document.getElementById('mensagem').value.trim();
+  const nome = document.getElementById('nome').value;
+  const email = document.getElementById('email').value;
+  const mensagem = document.getElementById('mensagem').value;
 
-      // BUG #21: validação de email incompleta - não valida o formato correto
-      if (!nome || !email || !mensagem) {
-        alert('Por favor, preencha todos os campos!');
-        return;
-      }
-
-      // BUG #22: mensagem de sucesso diz "entraremos em contato em até 24 horas"
-      // mas o email de contato no HTML está errado (.com.rb), então nunca funcionaria
-      alert('Mensagem enviada com sucesso! Entraremos em contato em até 24 horas.');
-      form.reset();
-    });
+  // Validação simples
+  if (!nome || !email || !mensagem) {
+    alert('Por favor, preencha todos os campos!');
+    return;
   }
 
+  // Simulação de envio
+  console.log({
+    nome,
+    email,
+    mensagem
+  });
+
+  alert('Mensagem enviada com sucesso! 🐾');
+
+  // Limpar formulário
+  form.reset();
+});
   // =====================
   // HIGHLIGHT DO MENU ATIVO
   // =====================
@@ -60,6 +64,35 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  const formAgendamento = document.getElementById('formAgendamento');
+
+formAgendamento.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const nome = document.getElementById('nomeAgendamento').value.trim();
+  const servico = document.getElementById('servico').value;
+  const data = document.getElementById('data').value;
+  const hora = document.getElementById('hora').value;
+
+  if (!nome || !servico || !data || !hora) {
+    alert('Preencha todos os campos do agendamento!');
+    return;
+  }
+
+  console.log({
+    nome,
+    servico,
+    data,
+    hora
+  });
+
+  alert(`Agendamento confirmado para ${data} às ${hora}! 🐾`);
+
+  formAgendamento.reset();
+});
+
+
+
   // =====================
   // ANO NO FOOTER (DEVERIA SER DINÂMICO)
   // =====================
@@ -69,3 +102,4 @@ document.addEventListener('DOMContentLoaded', function () {
   const anoAtual = new Date().getFullYear();
   // console.log('Ano atual:', anoAtual); // linha comentada e nunca usada
 });
+
