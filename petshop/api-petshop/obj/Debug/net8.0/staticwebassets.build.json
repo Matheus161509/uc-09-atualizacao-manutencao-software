@@ -1,0 +1,331 @@
+{
+  "Version": 1,
+  "Hash": "NVMVijGtAyk84qF+WVMk/kNR/ZBrcbVj+D1h+iexLYc=",
+  "Source": "ApiPetshop",
+  "BasePath": "_content/ApiPetshop",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ApiPetshop\\wwwroot",
+      "Source": "ApiPetshop",
+      "ContentRoot": "C:\\Users\\Aluno\\Teteu-atualização\\uc-09-atualizacao-manutencao-software\\petshop\\api-petshop\\wwwroot\\",
+      "BasePath": "_content/ApiPetshop",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Aluno\\Teteu-atualização\\uc-09-atualizacao-manutencao-software\\petshop\\api-petshop\\wwwroot\\.keep",
+      "SourceId": "ApiPetshop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Aluno\\Teteu-atualização\\uc-09-atualizacao-manutencao-software\\petshop\\api-petshop\\wwwroot\\",
+      "BasePath": "_content/ApiPetshop",
+      "RelativePath": "#[.{fingerprint}]?.keep",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5ipweew5fc",
+      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\.keep"
+    },
+    {
+      "Identity": "C:\\Users\\Aluno\\Teteu-atualização\\uc-09-atualizacao-manutencao-software\\petshop\\api-petshop\\wwwroot\\uploads\\.keep",
+      "SourceId": "ApiPetshop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Aluno\\Teteu-atualização\\uc-09-atualizacao-manutencao-software\\petshop\\api-petshop\\wwwroot\\",
+      "BasePath": "_content/ApiPetshop",
+      "RelativePath": "uploads/#[.{fingerprint}]?.keep",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5ipweew5fc",
+      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\.keep"
+    },
+    {
+      "Identity": "C:\\Users\\Aluno\\Teteu-atualização\\uc-09-atualizacao-manutencao-software\\petshop\\api-petshop\\wwwroot\\uploads\\5e010393-1d96-4924-8668-856face8d40a_images.webp",
+      "SourceId": "ApiPetshop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Aluno\\Teteu-atualização\\uc-09-atualizacao-manutencao-software\\petshop\\api-petshop\\wwwroot\\",
+      "BasePath": "_content/ApiPetshop",
+      "RelativePath": "uploads/5e010393-1d96-4924-8668-856face8d40a_images#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8mtdw1xpxv",
+      "Integrity": "0BTVYnxbkM7pw3EaRRCM05HtM3GYDIwT+U9AqJ638Mw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\5e010393-1d96-4924-8668-856face8d40a_images.webp"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": ".5ipweew5fc.keep",
+      "AssetFile": "C:\\Users\\Aluno\\Teteu-atualização\\uc-09-atualizacao-manutencao-software\\petshop\\api-petshop\\wwwroot\\.keep",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Apr 2026 22:40:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5ipweew5fc"
+        },
+        {
+          "Name": "label",
+          "Value": ".keep"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": ".keep",
+      "AssetFile": "C:\\Users\\Aluno\\Teteu-atualização\\uc-09-atualizacao-manutencao-software\\petshop\\api-petshop\\wwwroot\\.keep",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Apr 2026 22:40:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/.5ipweew5fc.keep",
+      "AssetFile": "C:\\Users\\Aluno\\Teteu-atualização\\uc-09-atualizacao-manutencao-software\\petshop\\api-petshop\\wwwroot\\uploads\\.keep",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Apr 2026 22:40:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5ipweew5fc"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/.keep"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/.keep",
+      "AssetFile": "C:\\Users\\Aluno\\Teteu-atualização\\uc-09-atualizacao-manutencao-software\\petshop\\api-petshop\\wwwroot\\uploads\\.keep",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Apr 2026 22:40:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/5e010393-1d96-4924-8668-856face8d40a_images.8mtdw1xpxv.webp",
+      "AssetFile": "C:\\Users\\Aluno\\Teteu-atualização\\uc-09-atualizacao-manutencao-software\\petshop\\api-petshop\\wwwroot\\uploads\\5e010393-1d96-4924-8668-856face8d40a_images.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22828"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0BTVYnxbkM7pw3EaRRCM05HtM3GYDIwT+U9AqJ638Mw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 24 Apr 2026 22:56:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8mtdw1xpxv"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/5e010393-1d96-4924-8668-856face8d40a_images.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0BTVYnxbkM7pw3EaRRCM05HtM3GYDIwT+U9AqJ638Mw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/5e010393-1d96-4924-8668-856face8d40a_images.webp",
+      "AssetFile": "C:\\Users\\Aluno\\Teteu-atualização\\uc-09-atualizacao-manutencao-software\\petshop\\api-petshop\\wwwroot\\uploads\\5e010393-1d96-4924-8668-856face8d40a_images.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22828"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0BTVYnxbkM7pw3EaRRCM05HtM3GYDIwT+U9AqJ638Mw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 24 Apr 2026 22:56:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0BTVYnxbkM7pw3EaRRCM05HtM3GYDIwT+U9AqJ638Mw="
+        }
+      ]
+    }
+  ]
+}
