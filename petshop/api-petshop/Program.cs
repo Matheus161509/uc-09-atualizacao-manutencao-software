@@ -51,9 +51,11 @@ var app = builder.Build();
 // Verifica se o ambiente de execução é "Desenvolvimento"
 if (app.Environment.IsDevelopment())
 {
-    // Habilita o middleware do Swagger para disponibilizar a documentação JSON
     app.UseSwagger();
-    // Gera uma interface de usuário alternativa e moderna inspirada no Scalar
+
+    // ✅ ADICIONADO
+    app.UseSwaggerUI();
+
     app.MapScalarApiReference(options =>
     {
         options.WithOpenApiRoutePattern("/swagger/{documentName}/swagger.json");

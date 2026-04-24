@@ -14,8 +14,8 @@
 # Host: localhost | Porta: 3306 | Usuário: root | Senha: SuperSenha@10
 
 name: Databases
-
 services:
+
   mysql-db:
     container_name: mysql-db
     image: mysql:8.0
@@ -26,7 +26,3 @@ services:
       MYSQL_DATABASE: "dbpadrao"
     volumes:
       - mysql_data:/var/lib/mysql
-
-volumes:
-  mysql_data:
-      
