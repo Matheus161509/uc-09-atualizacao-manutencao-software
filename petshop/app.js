@@ -124,8 +124,14 @@ async function carregarGaleria() {
       grid.innerHTML = '';
 
       if (fotos.length === 0) {
-        grid.innerHTML = '<p class="text-center col-span-3 text-gray-500">Nenhuma foto na galeria.</p>';
-        return;
+        // O usuário pediu para adicionar algumas imagens à galeria.
+        // Como o banco está vazio, vamos carregar essas fotos padrão por enquanto.
+        fotos = [
+          { nomeCachorro: 'Thor', caminhoFoto: 'https://images.unsplash.com/photo-1558788353-f76d92427f16' },
+          { nomeCachorro: 'Max', caminhoFoto: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d' },
+          { nomeCachorro: 'Nina', caminhoFoto: 'https://images.unsplash.com/photo-1574158622682-e40e69881006' },
+          { nomeCachorro: 'Bob', caminhoFoto: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6' }
+        ];
       }
 
       fotos.forEach(f => {
