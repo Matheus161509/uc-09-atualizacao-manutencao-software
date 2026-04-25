@@ -1,0 +1,13 @@
+﻿  Determinando os projetos a serem restaurados...
+  Todos os projetos est├úo atualizados para restaura├º├úo.
+C:\Users\Aluno\Matheus Petshop\uc-09-atualizacao-manutencao-software\petshop\api-petshop\Data\SeedData.cs(60,2): error CS1513: } esperada [C:\Users\Aluno\Matheus Petshop\uc-09-atualizacao-manutencao-software\petshop\api-petshop\ApiPetshop.csproj]
+
+FALHA da compila├º├úo.
+
+C:\Users\Aluno\Matheus Petshop\uc-09-atualizacao-manutencao-software\petshop\api-petshop\Data\SeedData.cs(60,2): error CS1513: } esperada [C:\Users\Aluno\Matheus Petshop\uc-09-atualizacao-manutencao-software\petshop\api-petshop\ApiPetshop.csproj]
+    0 Aviso(s)
+    1 Erro(s)
+
+Tempo Decorrido 00:00:01.23
+
+As atualiza├º├Áes de carga de trabalho est├úo dispon├¡veis. Execute `dotnet workload list` para obter mais informa├º├Áes.
