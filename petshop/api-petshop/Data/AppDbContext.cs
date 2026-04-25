@@ -15,9 +15,10 @@ public class AppDbContext : DbContext
     {
     }
 
-    // O DbSet representa uma tabela no banco de dados.
-    // Neste caso, a tabela armazenará objetos do tipo "FotoAntesDepois".
     public DbSet<FotoAntesDepois> FotosAntesDepois { get; set; }
+    public DbSet<Lead> Leads { get; set; }
+    public DbSet<Depoimento> Depoimentos { get; set; }
+    public DbSet<AdminUser> AdminUsers { get; set; }
 
     /// <summary>
     /// Este método é chamado quando o modelo de banco de dados está sendo criado.

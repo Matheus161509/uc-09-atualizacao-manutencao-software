@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Patas Felizes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Nunito', sans-serif; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+
+  <!-- LOGIN SECTION -->
+  <div id="loginSection" class="flex-grow flex items-center justify-center">
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-sm">
+      <div class="text-center mb-6">
+        <h2 class="text-2xl font-bold text-yellow-600">Área Administrativa</h2>
+      </div>
+      <form id="formLogin">
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2">Usuário</label>
+          <input type="text" id="username" class="w-full border px-4 py-2 rounded-lg outline-none focus:border-yellow-500" required>
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 font-semibold mb-2">Senha</label>
+          <input type="password" id="password" class="w-full border px-4 py-2 rounded-lg outline-none focus:border-yellow-500" required>
+        </div>
+        <button type="submit" class="w-full bg-yellow-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-yellow-600">Entrar</button>
+      </form>
+      <p id="loginError" class="text-red-500 text-center mt-4 hidden">Usuário ou senha incorretos!</p>
+    </div>
+  </div>
+
+  <!-- ADMIN DASHBOARD SECTION -->
+  <div id="adminSection" class="hidden flex-grow flex">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 text-white flex flex-col">
+      <div class="p-6 text-xl font-bold border-b border-gray-700">Painel Admin</div>
+      <nav class="flex-grow flex flex-col p-4 gap-2">
+        <button onclick="showTab('leads')" class="text-left px-4 py-2 rounded hover:bg-gray-700 focus:bg-gray-700">Leads (Mensagens)</button>
+        <button onclick="showTab('depoimentos')" class="text-left px-4 py-2 rounded hover:bg-gray-700 focus:bg-gray-700">Depoimentos</button>
+        <button onclick="showTab('galeria')" class="text-left px-4 py-2 rounded hover:bg-gray-700 focus:bg-gray-700">Galeria</button>
+      </nav>
+      <div class="p-4 border-t border-gray-700">
+        <button onclick="logout()" class="w-full text-center text-red-400 hover:text-red-300">Sair</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-grow p-8">
+      
+      <!-- Tab Leads -->
+      <section id="tab-leads" class="tab-content hidden">
+        <h2 class="text-2xl font-bold mb-4">Mensagens Recebidas</h2>
+        <div class="bg-white rounded shadow overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-gray-200">
+                <th class="p-4 border-b">Data</th>
+                <th class="p-4 border-b">Nome</th>
+                <th class="p-4 border-b">E-mail</th>
+                <th class="p-4 border-b">Mensagem</th>
+              </tr>
+            </thead>
+            <tbody id="leadsTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Tab Depoimentos -->
+      <section id="tab-depoimentos" class="tab-content hidden">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-2xl font-bold">Gerenciar Depoimentos</h2>
+          <button onclick="openModalDepoimento()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Novo Depoimento</button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="depoimentosGrid"></div>
+      </section>
+
+      <!-- Tab Galeria -->
+      <section id="tab-galeria" class="tab-content hidden">
+        <h2 class="text-2xl font-bold mb-4">Gerenciar Galeria</h2>
+        <form id="formFoto" class="bg-white p-4 rounded shadow mb-6 flex gap-4 items-center">
+            <input type="text" id="fotoNome" placeholder="Nome do Pet" required class="border px-3 py-2 rounded" />
+            <input type="file" id="fotoArquivo" accept="image/*" required class="border px-3 py-2 rounded" />
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Fazer Upload</button>
+        </form>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6" id="galeriaGrid"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Modal Depoimento -->
+  <div id="modalDepoimento" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+    <div class="bg-white p-6 rounded-lg w-full max-w-md">
+       <h3 class="text-xl font-bold mb-4" id="modalTitle">Novo Depoimento</h3>
+       <form id="formSalvarDepoimento">
+          <input type="hidden" id="depoimentoId">
+          <div class="mb-3">
+              <label class="block font-semibold">Nome do Autor</label>
+              <input type="text" id="depoimentoAutor" class="w-full border p-2 rounded" required>
+          </div>
+          <div class="mb-3">
+              <label class="block font-semibold">Texto</label>
+              <textarea id="depoimentoTexto" class="w-full border p-2 rounded" rows="3" required></textarea>
+          </div>
+          <div class="mb-4">
+              <label class="block font-semibold">URL da Foto (opcional)</label>
+              <input type="text" id="depoimentoAvatar" class="w-full border p-2 rounded" placeholder="Ex: images/pessoa1.jpg">
+          </div>
+          <div class="flex justify-end gap-2">
+              <button type="button" onclick="closeModalDepoimento()" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Cancelar</button>
+              <button type="submit" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Salvar</button>
+          </div>
+       </form>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

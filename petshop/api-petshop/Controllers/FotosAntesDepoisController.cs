@@ -1,5 +1,7 @@
 using ApiPetshop.Data;
 using ApiPetshop.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -41,6 +43,7 @@ public class FotosAntesDepoisController : ControllerBase
     /// Rota responsável por receber a imagem do cachorro e as informações vindas do formulário HTML/JS.
     /// É o momento onde o arquivo é fisicamente salvo no servidor e seus dados no banco.
     /// </summary>
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [HttpPost("upload")]
     [Consumes("multipart/form-data")] // Assinatura obrigatória para recebimento de arquivos em formulários web!
     public async Task<IActionResult> UploadFoto([FromForm] UploadFotoDto request)
@@ -86,6 +89,7 @@ public class FotosAntesDepoisController : ControllerBase
     /// Rota: DELETE /api/fotos/{id}
     /// Deleta exclusivamente um item baseado em seu ID (ex. DELETE http://localhost:5000/api/fotos/3). 
     /// </summary>
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [HttpDelete("{id}")]
     public async Task<IActionResult> Deletar(int id)
     {

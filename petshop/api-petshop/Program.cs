@@ -1,6 +1,9 @@
 using ApiPetshop.Data;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 // Inicializa o criador (builder) da aplicação Web
 var builder = WebApplication.CreateBuilder(args);
@@ -34,6 +37,25 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Adiciona os serviços necessários para trabalhar com Controllers (as rotas/APIs)
 builder.Services.AddControllers();
+
+var key = Encoding.ASCII.GetBytes(builder.Configuration["JwtSettings:SecretKey"] ?? "EssaEhMinhaChaveSuperSecretaEForteDoPetshop123!");
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(x =>
+{
+    x.RequireHttpsMetadata = false;
+    x.SaveToken = true;
+    x.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateIssuer = false,
+        ValidateAudience = false
+    };
+});
 
 // Adiciona recursos para descobrir automatiamente os endpoints e mostrar na documentação
 builder.Services.AddEndpointsApiExplorer();
@@ -71,7 +93,8 @@ app.UseStaticFiles();
 // Aplica a política de CORS criada anteriormente ("AllowAll")
 app.UseCors("AllowAll");
 
-// Habilita a autorização (caso tivéssemos sistema de login com token JWT, por exemplo)
+// Habilita a autorização e autenticação
+app.UseAuthentication();
 app.UseAuthorization();
 
 // Mapeia nossas classes Controllers para que respondam às requisições chamadas

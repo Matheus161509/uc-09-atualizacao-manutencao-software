@@ -47,5 +47,15 @@ public static class SeedData
             // e de fato grave essas informações no banco de dados MySQL.
             context.SaveChanges();
         }
+            // Adiciona admin
+        if (!context.AdminUsers.Any())
+        {
+            context.AdminUsers.Add(new AdminUser
+            {
+                Username = "admin",
+                PasswordHash = "admin123" // In real life, use a hash, this is simple.
+            });
+            context.SaveChanges();
+        }
     }
 }
